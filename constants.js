@@ -1,0 +1,1 @@
+export const FAKE_DATA = "https://dummyjson.com/products";

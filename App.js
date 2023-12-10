@@ -4,6 +4,9 @@ import Home from './screens/Home.js';
 import Button from './components/Button.js';
 import { useState } from 'react';
 import RInput from './components/Input.js';
+import ScrollableContainer from './components/ScrollableContainer.js';
+import ProductList from './components/products/ProductList.js';
+import Contact from './components/Contact/Contact.js';
 
 export default function App() {
   const [counter, setCounter] = useState(0)
@@ -11,7 +14,7 @@ export default function App() {
   const [isEnabled, setIsEnabled] = useState(false)
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app! {counter}</Text>
+      {/* <Text>Open up App.js to start working on your app! {counter}</Text>
       <Button text="Signup" color={"black"} handlePress={() =>setCounter((prev) => prev +1)}/>
       <RInput value={email} handleInput={setEmail}/>
       <StatusBar
@@ -21,9 +24,6 @@ export default function App() {
       />
       <Image
       style={{backgroundColor: "white",width: 144, height: 144}}
-      // source={{
-      //   uri: "https://assets-global.website-files.com/621c8d7ad9e04933c4e51ffb/622b292dc8158c9ddd048da6_clearspace_2%402x.png"
-      // }}
       source={require('./assets/slack.png')}
       />
         <Switch
@@ -35,6 +35,8 @@ export default function App() {
       />
       <Home/>
       <StatusBar style="auto" />
+      <ScrollableContainer/> */}
+      <Contact/>
     </View>
   );
 }
