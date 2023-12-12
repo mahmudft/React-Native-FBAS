@@ -2,3 +2,5 @@ Login Form
 Signup form 
 Ustune vuranda Submit Modal -> Mesaj cixarilsin
 Logo Elave olsun
+++++
+React navigasiya ilə signup ve login arasi kecid edin

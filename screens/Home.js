@@ -1,14 +1,14 @@
-import { Text, View, StyleSheet, Button, TextInput } from "react-native";
+import { Text, View, StyleSheet, TextInput,Button } from "react-native";
 import { useState, useEffect } from "react";
-export default function Home(){
-    const [state, setState] = useState(0)
 
-    return(
+export default function Home({navigation}) {
+    const [state, setState] = useState('')
+
+    return (
         <View style={styles.container}>
             <Text style={styles.textStyle}>Home User Screen</Text>
-            <Text style={styles.textStyle}>{state}</Text>
-            <TextInput keyboardType="numeric"/>
-            <Button onPress={() => setState((previousvalue) => previousvalue+1)} color="green" style={styles.buttonStyle} title="Select"/>
+            <TextInput value={state} onChangeText={setState} style={styles.input}/>
+            <Button title="Go Profile" onPress={() => navigation.navigate("Profile")}/>
         </View>
     )
 }
@@ -19,7 +19,7 @@ const styles = StyleSheet.create({
         borderColor: 'green',
         backgroundColor: "lightgray",
         width: '100%',
-        height: 'auto'
+        height: '100%'
     },
     textStyle: {
         color: "purple",
@@ -27,5 +27,12 @@ const styles = StyleSheet.create({
     },
     buttonStyle: {
         color: "green"
+    },
+    input:{
+        width: "80%",
+        marginHorizontal: 5,
+        height: 50,
+        borderColor: "black",
+        borderWidth: 1
     }
 })
